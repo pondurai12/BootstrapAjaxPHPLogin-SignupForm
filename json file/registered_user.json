@@ -1,0 +1,16 @@
+[
+{"type":"header","version":"4.8.5","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"db_guviintern"},
+{"type":"table","name":"registered_user","database":"db_guviintern","data":
+[
+{"id":"1","name":"pondurai","age":"21","contact":"9715797139","email":"pdurai31@gmail.com","password":"duraivijay"},
+{"id":"2","name":"abc","age":"212","contact":"9715797139","email":"pdur","password":"123"},
+{"id":"3","name":"ada","age":"21","contact":"12","email":"asassa","password":"asaa"},
+{"id":"4","name":"sd","age":"212","contact":"ass","email":"pdurai21@gmail.com","password":"dere"},
+{"id":"5","name":"a121","age":"21","contact":"9715797139","email":"pdurai31@gmail.com","password":"duraivijay"},
+{"id":"6","name":"a121","age":"21","contact":"9715797139","email":"pdurai31@gmail.com","password":"duraivijay"},
+{"id":"7","name":"a121","age":"21","contact":"9715797139","email":"pdurai31@gmail.com","password":"duraivijay"},
+{"id":"8","name":"err","age":"32","contact":"9715797139","email":"pdurai34@gmail.com","password":"duraivijaww"}
+]
+}
+]
