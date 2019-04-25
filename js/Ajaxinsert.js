@@ -23,7 +23,7 @@ if(name==''||age==''||contact==''||email=='' ||password=='')
 	 }else    
 $.ajax(
 {
-url: "Ajaxinsert.php",
+url: "Ajaxinsertregistered_user.php",
 type: "POST",
 data:$('#form').serialize(),
 beforeSend:function(){
