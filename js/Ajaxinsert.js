@@ -4,44 +4,38 @@
 $(document).ready(function(){
 	
     $('#register').click(function(){
-   var name = $('#username').val();
-    var age= $('#age').val();
-    var contact = $('#contact').val();
-    var email = $('#email').val();
-    var password = $('#password').val();
+//   var name = $('#name').val();
+//    var age= $('#age').val();
+//    var contact = $('#contact').val();
+//    var email = $('#email').val();
+//    var password = $('#password').val();
       
- 
- alert("name "+name+"age "+age+"contact "+contact+"email "+email+"aaa "+password);
+ var data = $('#form').serialize();
+ //alert("name "+name+"age "+age+"contact "+contact+"email "+email+"aaa "+password);
      
+//alert("daa "+data);
 
-
-if(name==''||age==''||contact==''||email=='' ||password=='')
+/*if(name!=''||age!=''||contact!=''||email!='' ||password!='')
  {
- 	 $('#response').html('<span class="text-danger">All fields are Required</span>')
+	 alert("name inside if  "+name+"age "+age+"contact "+contact+"email "+email+"aaa "+password);
+ 	 $('#dis').html('<span class="text-danger">All fields are Required</span>')
  }else if ((password.length) < 8) {
- $('#response').html('<span class="text-danger">Password should atleast 8 character in length...!!!!!!")</span>')
-	 }else    
+ $('#dis').html('<span class="text-danger">Password should atleast 8 character in length...!!!!!!")</span>')
+	 }else    {
+		 alert("  elseename "+name+"age "+age+"contact "+contact+"email "+email+"aaa "+password);*/
 $.ajax(
 {
-url: "Ajaxinsertregistered_user.php",
+url: "Ajaxinsert.php",
 type: "POST",
-data:$('#form').serialize(),
-beforeSend:function(){
-	$('#response').html('<span class="text">Loding....response.</span>')
-},
-success: function(data)
-{
-$('form').trigger("reset");
-$('#response').fadeIn().html(data);
-setTimeOut(function(){
-$('#response').fadeOut(slow)}
-,5000);
-
+data:data,
+success: function(data){
+	alert(" sucessfully Registered added Record"+data);
 }
+
 
 });
 
-
+	 
      });  
 });
 
