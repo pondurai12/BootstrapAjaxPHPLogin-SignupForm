@@ -1,4 +1,7 @@
 <?php
+
+
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -10,9 +13,10 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-}
+}else{
+	
 
-// prepare and bind
+//prepare and bind
 $stmt = $conn->prepare("INSERT INTO registered_user (name, age,contact, email,password) VALUES (?, ?, ?,?,?)");
 $stmt->bind_param("sssss", $name,$age,$contact,$email,$password);
 
@@ -25,7 +29,10 @@ $email = $_POST['email'];
 $stmt->execute();
 
 echo "New records created successfully";
-
+}
 $stmt->close();
 $conn->close();
+
 ?>
+
+
